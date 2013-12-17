@@ -1,0 +1,7 @@
+#!/usr/bin/env jruby
+
+require 'bundler/setup'
+Bundler.require(:default)
+
+player = Hangman::Player::Runner.new(ARGV)
+player.run!
