@@ -18,11 +18,9 @@ describe Hangman::Dictionary::Storage do
   end
 
   describe '#sample' do
-    before do
-      subject.add('lorem').add('ipsum').add('amet')
+    before { subject.add('lorem').add('ipsum').add('amet') }
 
-      it { assert_equal 3, subject.sample(3).size }
-      it { assert_includes ['LOREM', 'IPSUM', 'AMET'], subject.sample(1)  }
-    end
+    it { assert_equal 3, subject.sample(3).size }
+    it { assert_includes ['LOREM', 'IPSUM', 'AMET'], subject.sample(1).first  }
   end
 end

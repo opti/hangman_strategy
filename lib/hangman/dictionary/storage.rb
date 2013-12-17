@@ -10,6 +10,7 @@ module Hangman
       def add(value)
         value = normalize(value)
         entries[value.size].add(value)
+        self
       end
 
       def fetch(key)
