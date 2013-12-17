@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/opti/hangman_strategy.png)](https://codeclimate.com/github/opti/hangman_strategy)
+[![Build Status](https://travis-ci.org/opti/hangman_strategy.png?branch=master)](https://travis-ci.org/opti/hangman_strategy)
+[![Coverage Status](https://coveralls.io/repos/opti/hangman_strategy/badge.png)](https://coveralls.io/r/opti/hangman_strategy)
+
 # HangmanStrategy
 
 Guessing strategy for Hangman game.
