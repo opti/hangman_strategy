@@ -35,8 +35,11 @@ module Hangman
       end
 
       def letter
-        (dictionary.letters - game.all_guessed_letters).first ||
-          EnglishPopularity.new(game).letter
+        remain_letters.first || EnglishPopularity.new(game).letter
+      end
+
+      def remain_letters
+        dictionary.letters - game.all_guessed_letters
       end
 
       def pattern
