@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require 'hangman_strategy'
 
 gem 'minitest'
