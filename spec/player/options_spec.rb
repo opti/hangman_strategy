@@ -24,4 +24,31 @@ describe Hangman::Player::Options do
 
     it { assert_equal ['lorem', 'ipsum'], subject.words }
   end
+
+  describe "information outputs" do
+    describe "help message" do
+      let(:opts) { ['-h'] }
+
+      it "should show help message" do
+        begin
+          out, err = capture_io { subject }
+
+          assert_match (/Guessing strategy for Hangman game/i), out
+        rescue SystemExit
+        end
+      end
+
+      describe "version" do
+        let(:opts) { ['-v'] }
+
+        it "should show gem version" do
+          begin
+            out, err = capture_io { subject }
+            assert_equal Hangman::VERSION, out
+          rescue SystemExit
+          end
+        end
+      end
+    end
+  end
 end
